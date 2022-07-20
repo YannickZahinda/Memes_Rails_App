@@ -1,0 +1,23 @@
+<h2>Edit meme here</h2>
+
+<%= form_with model: @fun, local: true do |form| %>
+    <p> 
+        <%= form.label :name %>
+        <br>
+        <%= form.text_field :name %>
+    </p>
+    <p> 
+        <%= form.label :content %>
+        <br>
+        <%= form.text_area :content %>
+    </p>
+    <p> 
+        <%= form.label :author %>
+        <br>
+        <%= form.text_field :author %>
+    </p>
+
+    <p>
+        <%= form.submit "Update meme"%>
+    </p>
+<% end %>

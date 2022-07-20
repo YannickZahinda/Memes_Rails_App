@@ -1,0 +1,14 @@
+<h2>List of all controller resources funs</h2>
+<br>
+<div><%= link_to "Add meme", new_fun_path()%></div>
+<br>
+<% @funs.each do |fun| %>
+  <h3> Meme name : <%= fun.name%> </h3>
+  <div>Meme content : <%= fun.content%></div>
+  <div>Meme author : <%= fun.author%></div>
+  <div><%= link_to "Show meme", fun_path(fun) %></div>
+  <div><%= link_to "Edit meme", edit_fun_path(fun) %></div>
+  <div><%= link_to "Delete meme", fun_path(fun), method: :post %></div>
+  <hr>
+
+<% end %>
